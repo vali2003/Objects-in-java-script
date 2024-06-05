@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mobile(companyName,modelName,price,processor){
+            this.companyName=companyName;
+            this.modelName=modelName;
+            this.price=price;
+            this.processor=processor;
+        }
+        let m1=new mobile("vivi","v27pro","55000","sp888");
+        let m2=new mobile("google","g7pro","72000","sp963");
+        let m3=new mobile("rebmi","k20pro","62000","sp999");
+        let mobileArray=[m1,m2,m3]
+        for(let a of mobileArray){
+            document.write("<br>")
+            if(a.price>70000){
+                for(let i in a){
+                    document.write(i+":"+a[i]+"<br>")
+                }
+            }
+        }
+    </script>
+</body>
+</html>

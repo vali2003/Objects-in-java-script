@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //student function=> studentName,studentClass,studentlocation,studentmarks in percentage.
+        function student(studentName,studentClass,studentlocation,studentmarks){
+            this.studentName=studentName;
+            this.studentClass=studentClass;
+            this.studentlocation=studentlocation;
+            this.studentmarks=studentmarks;
+        }
+        let  s1=new student("MURTHU","MBA","HYD",99);
+        let  s2=new student("ismail","MCA","UK",96);
+        let  s3=new student("gg","MCA","UK",95);
+        let  s4=new student("sn","BCA","VS",85);
+        let studentArr=[s1,s2,s3,s4]
+        for(let a of studentArr){
+            document.write("....<br>")
+            if((a.studentClass=="MCA") && (a.studentlocation=="UK") && (a.studentmarks>=80)){
+                for(let i in a){
+                    document.write(i+":"+a[i]+"<br>")
+                }
+            }
+        }
+        
+        document.write("good night");
+    </script>
+</body>
+</html>
